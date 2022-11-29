@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='imgFix/logo2.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <h1>PEERPUSNYA PNJ BANGKIT</h1>
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-5">
+
+        <h2>Login</h2>
+        <form method="post">
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="form3Example3" class="form-control form-control-lg" name="username"
+              placeholder="Enter a valid email address" />
+            <label class="form-label" for="form3Example3">Username</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg" name="password"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
+            </div>
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <a href="{{url_for('dashboard')}}"><button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button></a>
+            
+              <a href="{{url_for('register')}}"><button type="button" class="btn btn-no btn-lg btn-outline-danger"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button></a>
+
+              <a href="{{url_for('index')}}"><button type="button" class="btn btn-outline-success btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Main Page</button></a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Register Your Account</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="quickForm" method="post" action="">
+              <div class="card-body">
+                <div class="form-group mb-3">
+                  <label for="exampleInputEmail1">Username</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button> -->
+                <!-- <div class="form-group mb-3">
+                  <label for="exampleInputPassword1">Nama</label>
+                  <input type="nama" name="nama" class="form-control" id="exampleInputnama1" placeholder="Ex: puguhmuamamr">
+                </div>
+                <form action="">
+                <label for="exampleInputPassword1">Jenis Kelamin</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Pria
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Wanita
+                  </label>
+                </div>
+              </form>
+                <div class="form-group mb-3">
+                  <label for="exampleInputPassword1">Tempat Lahir</label>
+                  <input type="instansi" name="instansi" class="form-control" id="exampleInputinstansi1" placeholder="Ex: Jakarta">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="exampleInputPassword1">Tanggal Lahir</label>
+                  <input type="date" name="instansi" class="form-control" id="exampleInputinstansi1" placeholder="Ex: 00/00/0000">
+                </div>
+                </form>
+                </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Foto Menggunakan Kemeja</label>
+                  <input class="form-control" type="file" id="formFile">
+                  <span style="color: red; font-size: small;">*max file 5Mb</span>
+                </div>
+              </div> -->
+              <!-- /.card-body -->
+            </form>
+        </div>
+      </div>
+    </div>     
+        </div>
+      </div>
+    </div>
+      </div>
+      
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
